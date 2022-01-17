@@ -1709,23 +1709,6 @@ Based on the following sources:
 &lt;/ul&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="SMB">
-<description>&lt;B&gt;DIODE&lt;/B&gt;</description>
-<wire x1="-2.2606" y1="1.905" x2="2.2606" y2="1.905" width="0.1016" layer="21"/>
-<wire x1="-2.2606" y1="-1.905" x2="2.2606" y2="-1.905" width="0.1016" layer="21"/>
-<wire x1="-2.2606" y1="-1.905" x2="-2.2606" y2="1.905" width="0.1016" layer="51"/>
-<wire x1="2.2606" y1="-1.905" x2="2.2606" y2="1.905" width="0.1016" layer="51"/>
-<wire x1="0.193" y1="1" x2="-0.83" y2="0" width="0.2032" layer="21"/>
-<wire x1="-0.83" y1="0" x2="0.193" y2="-1" width="0.2032" layer="21"/>
-<wire x1="0.193" y1="-1" x2="0.193" y2="1" width="0.2032" layer="21"/>
-<smd name="C" x="-2.2" y="0" dx="2.4" dy="2.4" layer="1"/>
-<smd name="A" x="2.2" y="0" dx="2.4" dy="2.4" layer="1"/>
-<text x="-2.159" y="2.159" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.159" y="-3.429" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-2.794" y1="-1.0922" x2="-2.2606" y2="1.0922" layer="51"/>
-<rectangle x1="2.2606" y1="-1.0922" x2="2.794" y2="1.0922" layer="51"/>
-<rectangle x1="-1.35" y1="-1.9" x2="-0.8" y2="1.9" layer="51"/>
-</package>
 <package name="MELF-MLL41">
 <description>&lt;b&gt;DIODE&lt;/b&gt;&lt;p&gt;
 Package DO-213AB = http://www.diotec.com/pdf/sm4001.pdf</description>
@@ -1944,7 +1927,7 @@ design rules under a new name.</description>
 <element name="C7" library="rcl" package="SMC_C" value="" x="59.182" y="41.7068"/>
 <element name="C8" library="rcl" package="C1206" value="" x="58.1025" y="37.945959375"/>
 <element name="C9" library="rcl" package="C1206" value="" x="63.027559375" y="25.806"/>
-<element name="C10" library="rcl" package="SMC_C" value="" x="52.702459375" y="23.467059375" rot="R270"/>
+<element name="C10" library="rcl" package="SMC_C" value="" x="52.783740625" y="28.298140625" rot="R90"/>
 <element name="IC2" library="lm1117" package="SOT223" value="LM1117IMPX-3.3" x="59.002559375" y="32.1056" rot="R180"/>
 <element name="R18" library="rcl" package="R1206" value="" x="59.002559375" y="24.384" rot="R270"/>
 <element name="C6" library="rcl" package="C0603" value="100nF" x="58.164359375" y="20.447" rot="R180"/>
@@ -1957,7 +1940,7 @@ design rules under a new name.</description>
 <element name="R24" library="rcl" package="R0603" value="220k" x="66.4718" y="15.367" rot="R270"/>
 <element name="IC5" library="mc34063" package="DIL08" value="MC34063AP" x="71.2216" y="48.895" rot="MR270"/>
 <element name="R25" library="rcl" package="R2010" value="0,22/1W" x="62.2808" y="48.895" rot="R90"/>
-<element name="C11" library="rcl" package="SMC_E" value="" x="57.15" y="49.8348" rot="R90"/>
+<element name="C11" library="rcl" package="SMC_E" value="" x="56.682" y="49.8348" rot="R90"/>
 <element name="C25" library="rcl" package="C0603" value="1nF" x="70.5358" y="45.085"/>
 <element name="R26" library="rcl" package="R1206" value="62k5" x="68.834" y="42.799" rot="R180"/>
 <element name="R27" library="rcl" package="R2512" value="10M" x="71.4248" y="31.75"/>
@@ -1975,7 +1958,6 @@ design rules under a new name.</description>
 <element name="JP4" library="SparkFun-Connectors" package="USB-B-MICRO-SMD_V03" value="USB_MICROB_PLUGCONN-11752" x="51.3842" y="59.3852" rot="R270">
 <attribute name="PROD_ID" value="CONN-11752" x="63.4492" y="69.5452" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="D1" library="diode" package="SMB" value="" x="50.4952" y="46.6848" rot="R180"/>
 <element name="U$5" library="mw" package="GEIGERTUBE" value="STS5" x="11.43" y="4.445"/>
 </elements>
 <signals>
@@ -2042,7 +2024,6 @@ design rules under a new name.</description>
 <contactref element="JP4" pad="GND1"/>
 <wire x1="50.0842" y1="56.6852" x2="50.0842" y2="54.3006" width="0.39878125" layer="1"/>
 <wire x1="50.0842" y1="54.3006" x2="48.6918" y2="52.9082" width="0.39878125" layer="1"/>
-<contactref element="D1" pad="A"/>
 <contactref element="U$5" pad="1B"/>
 <contactref element="U$5" pad="1A"/>
 </signal>
@@ -2053,7 +2034,7 @@ design rules under a new name.</description>
 <wire x1="52.6842" y1="56.6852" x2="52.6842" y2="54.329" width="0.39878125" layer="1"/>
 <wire x1="52.6842" y1="54.329" x2="52.705" y2="54.3082" width="0.39878125" layer="1"/>
 </signal>
-<signal name="VBUS">
+<signal name="9V">
 <contactref element="F3" pad="2"/>
 <contactref element="C7" pad="+"/>
 <contactref element="C8" pad="1"/>
@@ -2063,16 +2044,12 @@ design rules under a new name.</description>
 <contactref element="R25" pad="1"/>
 <contactref element="IC5" pad="6"/>
 <contactref element="C30" pad="1"/>
-<contactref element="D1" pad="C"/>
 <wire x1="67.4116" y1="47.625" x2="69.6858" y2="47.625" width="0.6096" layer="1"/>
 <wire x1="67.4116" y1="47.625" x2="65.405" y2="47.625" width="0.8128" layer="1"/>
 <wire x1="65.405" y1="47.625" x2="64.475" y2="46.695" width="0.8128" layer="1"/>
 <wire x1="62.2808" y1="46.695" x2="64.475" y2="46.695" width="0.8128" layer="1"/>
-<wire x1="52.705" y1="51.5082" x2="52.705" y2="46.6946" width="1.016" layer="1"/>
-<wire x1="52.705" y1="46.6946" x2="52.6952" y2="46.6848" width="1.016" layer="1"/>
-<wire x1="52.705" y1="46.6946" x2="57.1402" y2="46.6946" width="1.4224" layer="1"/>
-<wire x1="57.1402" y1="46.6946" x2="57.15" y2="46.6848" width="1.4224" layer="1"/>
-<wire x1="57.15" y1="46.6848" x2="62.2706" y2="46.6848" width="1.4224" layer="1"/>
+<wire x1="57.1402" y1="46.6946" x2="56.682" y2="46.6848" width="1.4224" layer="1"/>
+<wire x1="56.682" y1="46.6848" x2="62.2706" y2="46.6848" width="1.4224" layer="1"/>
 <wire x1="62.2706" y1="46.6848" x2="62.2808" y2="46.695" width="1.4224" layer="1"/>
 <wire x1="56.6805" y1="35.215659375" x2="56.691559375" y2="35.2046" width="0.8128" layer="1"/>
 <wire x1="56.682" y1="41.7068" x2="56.682" y2="38.1" width="1.016" layer="1"/>
@@ -2080,9 +2057,10 @@ design rules under a new name.</description>
 <wire x1="56.682" y1="35.214159375" x2="56.691559375" y2="35.2046" width="1.016" layer="1"/>
 <wire x1="56.7025" y1="37.945959375" x2="56.7025" y2="38.0795" width="1.016" layer="1"/>
 <wire x1="56.7025" y1="38.0795" x2="56.682" y2="38.1" width="1.016" layer="1"/>
-<wire x1="56.682" y1="41.7068" x2="57.15" y2="46.6848" width="0" layer="19" extent="1-1"/>
+<wire x1="56.682" y1="41.7068" x2="56.682" y2="46.6848" width="1.4224" layer="1"/>
+<wire x1="56.682" y1="46.6848" x2="52.705" y2="51.5082" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="_3V">
+<signal name="_5V">
 <contactref element="C9" pad="1"/>
 <contactref element="C10" pad="+"/>
 <contactref element="IC2" pad="2"/>
@@ -2093,8 +2071,8 @@ design rules under a new name.</description>
 <wire x1="59.002359375" y1="29.0068" x2="59.002559375" y2="29.0066" width="1.27" layer="1"/>
 <wire x1="59.002559375" y1="29.0066" x2="59.002559375" y2="25.806" width="1.016" layer="1"/>
 <wire x1="59.002559375" y1="25.806" x2="61.627559375" y2="25.806" width="1.016" layer="1"/>
-<wire x1="52.705" y1="25.9696" x2="52.702459375" y2="25.967059375" width="1.27" layer="1"/>
-<wire x1="52.702459375" y1="25.967059375" x2="59.002559375" y2="25.806" width="0" layer="19" extent="1-1"/>
+<wire x1="59.002559375" y1="25.806" x2="52.7916" y2="25.806" width="1.016" layer="1"/>
+<wire x1="52.7916" y1="25.806" x2="52.783740625" y2="25.798140625" width="1.016" layer="1"/>
 </signal>
 <signal name="N$1">
 <polygon width="0" layer="1" pour="cutout">
@@ -2104,7 +2082,7 @@ design rules under a new name.</description>
 <vertex x="54.010559375" y="54.8132"/>
 </polygon>
 </signal>
-<signal name="A_3V">
+<signal name="A_5V">
 <contactref element="R18" pad="2"/>
 <contactref element="C6" pad="1"/>
 <contactref element="IC3" pad="8"/>
@@ -2177,6 +2155,7 @@ design rules under a new name.</description>
 <wire x1="67.4116" y1="50.165" x2="65.405" y2="50.165" width="0.8128" layer="1"/>
 <wire x1="65.405" y1="50.165" x2="64.475" y2="51.095" width="0.8128" layer="1"/>
 <wire x1="62.2808" y1="51.095" x2="64.475" y2="51.095" width="0.8128" layer="1"/>
+<wire x1="73.025" y1="55.88" x2="77.47" y2="55.88" width="0.8128" layer="1"/>
 </signal>
 <signal name="N$11">
 <contactref element="IC5" pad="3"/>

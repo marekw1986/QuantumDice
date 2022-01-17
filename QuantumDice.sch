@@ -16304,8 +16304,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="U$4" library="diode" deviceset="DIODE-" device="MELF-MLL41"/>
 <part name="C34" library="rcl" deviceset="C-EU" device="050-024X044"/>
 <part name="JP4" library="SparkFun-Connectors" deviceset="USB_MICROB_PLUG" device="CONN-11752"/>
-<part name="D1" library="diode" deviceset="DIODE-" device="SMB"/>
-<part name="GND53" library="supply1" deviceset="GND" device=""/>
 <part name="U$5" library="mw" deviceset="STS5" device=""/>
 </parts>
 <sheets>
@@ -16365,8 +16363,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="U$4" gate="G$1" x="187.96" y="-299.72"/>
 <instance part="C34" gate="G$1" x="218.44" y="-304.8"/>
 <instance part="JP4" gate="G$1" x="68.58" y="-220.98" rot="MR0"/>
-<instance part="D1" gate="G$1" x="93.98" y="-223.52" rot="R90"/>
-<instance part="GND53" gate="1" x="93.98" y="-233.68"/>
 <instance part="U$5" gate="G$1" x="276.86" y="-299.72"/>
 </instances>
 <busses>
@@ -16471,11 +16467,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="304.8" y1="-299.72" x2="294.64" y2="-299.72" width="0.1524" layer="91"/>
 <pinref part="U$5" gate="G$1" pin="-"/>
 </segment>
-<segment>
-<pinref part="D1" gate="G$1" pin="A"/>
-<pinref part="GND53" gate="1" pin="GND"/>
-<wire x1="93.98" y1="-231.14" x2="93.98" y2="-226.06" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="N$14" class="0">
 <segment>
@@ -16484,7 +16475,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="JP4" gate="G$1" pin="VCC"/>
 </segment>
 </net>
-<net name="_3V" class="0">
+<net name="_5V" class="0">
 <segment>
 <pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="-215.9" x2="152.4" y2="-215.9" width="0.1524" layer="91"/>
@@ -16504,11 +16495,10 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="152.4" y1="-195.58" x2="152.4" y2="-215.9" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="VBUS" class="0">
+<net name="9V" class="0">
 <segment>
 <pinref part="F3" gate="G$1" pin="2"/>
-<wire x1="91.44" y1="-215.9" x2="93.98" y2="-215.9" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="-215.9" x2="101.6" y2="-215.9" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="-215.9" x2="101.6" y2="-215.9" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="-215.9" x2="116.84" y2="-215.9" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="+"/>
 <wire x1="116.84" y1="-215.9" x2="101.6" y2="-215.9" width="0.1524" layer="91"/>
@@ -16518,9 +16508,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="116.84" y1="-220.98" x2="116.84" y2="-215.9" width="0.1524" layer="91"/>
 <junction x="116.84" y="-215.9"/>
 <pinref part="IC2" gate="G$1" pin="IN"/>
-<pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="93.98" y1="-220.98" x2="93.98" y2="-215.9" width="0.1524" layer="91"/>
-<junction x="93.98" y="-215.9"/>
 </segment>
 <segment>
 <pinref part="C11" gate="G$1" pin="+"/>
@@ -16540,7 +16527,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <junction x="58.42" y="-317.5"/>
 </segment>
 </net>
-<net name="A_3V" class="0">
+<net name="A_5V" class="0">
 <segment>
 <pinref part="R18" gate="G$1" pin="2"/>
 <wire x1="172.72" y1="-195.58" x2="175.26" y2="-195.58" width="0.1524" layer="91"/>
